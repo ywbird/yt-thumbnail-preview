@@ -51,9 +51,9 @@ chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
     }
   });
 
-  const menuClose = document.querySelector('.menu-btn-close');
-  menuClose.addEventListener('click', () => {
-    window.close();
+  const menuOpen = document.querySelector('.menu-btn-open');
+  menuOpen.addEventListener('click', () => {
+    chrome.tabs.create({ url: thumbnailUrl });
   });
 
   let resize = 'small';
